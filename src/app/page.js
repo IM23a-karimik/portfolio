@@ -1,43 +1,63 @@
 import Image from "next/image";
-import tailwind from "tailwindcss";
 
 export default function Home() {
-    return (
-    <body className="bg-gray-100 font-sans m-0 p-0">
-
-    <header className="bg-white p-5 flex justify-between items-center border-b border-gray-300">
-        <div className="font-bold text-2xl">Kian</div>
+  return (
+    <div className="bg-gray-50 font-sans min-h-screen">
+      {/* Header */}
+      <header className="bg-white p-5 flex justify-between items-center shadow-md">
+        <div className="font-bold text-2xl text-gray-800">Kian</div>
         <nav className="flex gap-5">
-            <a href="home.html" className="text-black text-sm py-2 px-3 rounded hover:bg-teal-100">HOME</a>
-            <a href="ueber.html" className="text-black text-sm py-2 px-3 rounded hover:bg-teal-100">ÜBER</a>
-            <a href="portfolio.html" className="text-black text-sm py-2 px-3 rounded hover:bg-teal-100">PORTFOLIO</a>
-            <a href="news.html" className="text-black text-sm py-2 px-3 rounded hover:bg-teal-100">NEWS</a>
-            <a href="kontakt.html" className="text-black text-sm py-2 px-3 rounded hover:bg-teal-100">KONTAKT</a>
+          {[
+            { name: "HOME", href: "home.html" },
+            { name: "ÜBER", href: "ueber.html" },
+            { name: "PORTFOLIO", href: "portfolio.html" },
+            { name: "NEWS", href: "news.html" },
+            { name: "KONTAKT", href: "kontakt.html" },
+          ].map((item) => (
+            <a
+              key={item.name}
+              href={item.href}
+              className="text-gray-700 text-sm py-2 px-4 rounded-lg transition duration-200 hover:bg-teal-500 hover:text-white"
+            >
+              {item.name}
+            </a>
+          ))}
         </nav>
-    </header>
+      </header>
 
-    <main className="p-12">
-        <article className="flex gap-10 border-b border-gray-300 pb-5">
-            <section className="max-w-md">
-                <h1 className="text-4xl font-bold">Hi! Ich bin <strong>Kian</strong>.</h1>
-                <p className="text-xl mt-5 mb-10 leading-relaxed">Schön, dass du auf meiner Webseite gelandet bist. <br/>Auf
-                    dieser Webseite findest du verschiedene <br/>Projekte und Informationen über mich.</p>
-                <div className="flex gap-5">
-                    <a href="ueber.html"
-                       className="inline-block border-2 border-black py-2 px-6 text-black text-sm hover:bg-teal-100">ÜBER
-                        MICH →</a>
-                    <a href="portfolio.html"
-                       className="inline-block border-2 border-black py-2 px-6 text-black text-sm hover:bg-teal-100">PORTFOLIO
-                        →</a>
-                </div>
-            </section>
-        </article>
-    </main>
+      {/* Hero Section */}
+      <main className="flex flex-col items-center text-center p-12">
+        <Image
+          src="/hero-image.jpg"
+          width={600}
+          height={400}
+          alt="Hero Image"
+          className="rounded-lg shadow-lg"
+        />
+        <h1 className="text-5xl font-bold text-gray-900 mt-6">Hi! Ich bin Kian.</h1>
+        <p className="text-xl mt-4 text-gray-600 max-w-2xl leading-relaxed">
+          Schön, dass du hier bist! Auf meiner Webseite findest du meine Projekte und mehr über mich.
+        </p>
+        <div className="mt-6 flex gap-4">
+          <a
+            href="ueber.html"
+            className="border-2 border-black py-2 px-6 text-black text-sm rounded-lg transition duration-200 hover:bg-black hover:text-white"
+          >
+            ÜBER MICH →
+          </a>
+          <a
+            href="portfolio.html"
+            className="border-2 border-black py-2 px-6 text-black text-sm rounded-lg transition duration-200 hover:bg-black hover:text-white"
+          >
+            PORTFOLIO →
+          </a>
+        </div>
+      </main>
 
-    <footer className="p-5 text-center text-sm bg-white">
-    </footer>
-
-    </body>
-)
-    ;
+      {/* Footer */}
+      <footer className="p-5 text-center text-gray-500 text-sm bg-white border-t border-gray-300 mt-12">
+        © 2025 Kian. Alle Rechte vorbehalten.
+      </footer>
+    </div>
+  );
 }
