@@ -61,7 +61,7 @@ export default function Portfolio() {
           <div className="grid gap-8 md:grid-cols-2 items-center">
             <div className="space-y-6">
               <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
-                Hi, I'm <span className="text-primary">Kian Karimi</span>
+                Hi, I&apos;m <span className="text-primary">Kian Karimi</span>
               </h1>
               <p className="text-xl text-muted-foreground">
                 Computer Science student passionate about building innovative web applications and solving complex
