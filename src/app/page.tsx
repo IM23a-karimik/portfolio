@@ -61,7 +61,7 @@ export default function Portfolio() {
           <div className="grid gap-8 md:grid-cols-2 items-center">
             <div className="space-y-6">
               <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
-                Hi, I&apos;m <span className="text-primary">Kian Karimi</span>
+                Hi, I&#39;m <span className="text-primary">Kian Karimi</span>
               </h1>
               <p className="text-xl text-muted-foreground">
                 Computer Science student passionate about building innovative web applications and solving complex
@@ -197,7 +197,7 @@ export default function Portfolio() {
             <h2 className="text-3xl font-bold">My Projects</h2>
             <div className="w-20 h-1 bg-primary mx-auto"></div>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Here are some of the projects I've worked on. Each project represents my skills and passion for creating
+              Here are some of the projects I&#39;ve worked on. Each project represents my skills and passion for creating
               meaningful applications.
             </p>
           </div>
