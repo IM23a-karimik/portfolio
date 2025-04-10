@@ -209,7 +209,7 @@ export default function Portfolio() {
             </p>
           </div>
 
-          <div className="flex justify-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
             {/* Swiss Pharma Website Project */}
             <Card className="overflow-hidden max-w-md">
               <div className="h-48 overflow-hidden">
@@ -245,6 +245,41 @@ export default function Portfolio() {
                 <Button size="sm" asChild>
                   <Link href="https://github.com/IM23a-tutkuno/SwissPharmaWebsite" target="_blank">
                     Live Demo
+                  </Link>
+                </Button>
+              </CardFooter>
+            </Card>
+            
+            {/* Payment System Project */}
+            <Card className="overflow-hidden max-w-md">
+              <div className="h-48 overflow-hidden">
+                <Image
+                  src="/placeholder.svg?height=300&width=500"
+                  alt="Payment System"
+                  width={500}
+                  height={300}
+                  className="w-full h-full object-cover transition-transform hover:scale-105"
+                />
+              </div>
+              <CardHeader>
+                <CardTitle>Payment System</CardTitle>
+                <CardDescription>
+                  A modern payment processing system with secure transaction handling and user account management.
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <span className="px-2 py-1 bg-muted rounded-md text-xs">JavaScript</span>
+                  <span className="px-2 py-1 bg-muted rounded-md text-xs">Node.js</span>
+                  <span className="px-2 py-1 bg-muted rounded-md text-xs">Express</span>
+                  <span className="px-2 py-1 bg-muted rounded-md text-xs">MongoDB</span>
+                </div>
+              </CardContent>
+              <CardFooter className="flex justify-between">
+                <Button variant="outline" size="sm" asChild>
+                  <Link href="https://github.com/IM23a-karimik/Payment-system" target="_blank">
+                    <Github className="mr-2 h-4 w-4" />
+                    Code
                   </Link>
                 </Button>
               </CardFooter>
