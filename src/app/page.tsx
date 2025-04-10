@@ -323,7 +323,7 @@ export default function Portfolio() {
 
           <div className="text-center mt-12">
             <Button variant="outline" asChild>
-              <Link href="https://github.com" target="_blank">
+              <Link href="https://github.com/IM23a-karimik" target="_blank">
                 <Github className="mr-2 h-4 w-4" />
                 View More on GitHub
               </Link>
@@ -342,29 +342,7 @@ export default function Portfolio() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12">
-            <div>
-              <form className="space-y-6">
-                <div className="grid gap-4">
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <Input placeholder="Name" />
-                    </div>
-                    <div className="space-y-2">
-                      <Input placeholder="Email" type="email" />
-                    </div>
-                  </div>
-                  <div className="space-y-2">
-                    <Input placeholder="Subject" />
-                  </div>
-                  <div className="space-y-2">
-                    <Textarea placeholder="Message" className="min-h-[150px]" />
-                  </div>
-                </div>
-                <Button className="w-full">Send Message</Button>
-              </form>
-            </div>
-
+          <div className="max-w-2xl mx-auto">
             <div className="space-y-8">
               <div>
                 <h3 className="text-xl font-semibold mb-4">Contact Information</h3>
@@ -397,13 +375,6 @@ export default function Portfolio() {
                       <span className="sr-only">Twitter</span>
                     </Link>
                   </Button>
-                </div>
-              </div>
-
-              <div>
-                <h3 className="text-xl font-semibold mb-4">Location</h3>
-                <div className="rounded-lg overflow-hidden border h-[250px] bg-muted flex items-center justify-center">
-                  <p className="text-muted-foreground">Map placeholder</p>
                 </div>
               </div>
             </div>
