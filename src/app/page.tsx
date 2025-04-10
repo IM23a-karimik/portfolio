@@ -209,118 +209,41 @@ export default function Portfolio() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* Project 1 */}
-            <Card className="overflow-hidden">
+          <div className="flex justify-center">
+            {/* Swiss Pharma Website Project */}
+            <Card className="overflow-hidden max-w-md">
               <div className="h-48 overflow-hidden">
                 <Image
                   src="/placeholder.svg?height=300&width=500"
-                  alt="Project 1"
+                  alt="Swiss Pharma Website"
                   width={500}
                   height={300}
                   className="w-full h-full object-cover transition-transform hover:scale-105"
                 />
               </div>
               <CardHeader>
-                <CardTitle>AI Study Assistant</CardTitle>
+                <CardTitle>Swiss Pharma Website</CardTitle>
                 <CardDescription>
-                  A web application that helps students organize study materials and create flashcards using AI.
+                  A website for Swiss Pharma that provides information about the 
+                  companies and its products.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="flex flex-wrap gap-2 mb-4">
-                  <span className="px-2 py-1 bg-muted rounded-md text-xs">React</span>
-                  <span className="px-2 py-1 bg-muted rounded-md text-xs">Node.js</span>
-                  <span className="px-2 py-1 bg-muted rounded-md text-xs">OpenAI</span>
-                </div>
-              </CardContent>
-              <CardFooter className="flex justify-between">
-                <Button variant="outline" size="sm" asChild>
-                  <Link href="#" target="_blank">
-                    <Github className="mr-2 h-4 w-4" />
-                    Code
-                  </Link>
-                </Button>
-                <Button size="sm" asChild>
-                  <Link href="#" target="_blank">
-                    Live Demo
-                  </Link>
-                </Button>
-              </CardFooter>
-            </Card>
-
-            {/* Project 2 */}
-            <Card className="overflow-hidden">
-              <div className="h-48 overflow-hidden">
-                <Image
-                  src="/placeholder.svg?height=300&width=500"
-                  alt="Project 2"
-                  width={500}
-                  height={300}
-                  className="w-full h-full object-cover transition-transform hover:scale-105"
-                />
-              </div>
-              <CardHeader>
-                <CardTitle>E-commerce Dashboard</CardTitle>
-                <CardDescription>
-                  A comprehensive dashboard for e-commerce businesses to track sales and inventory.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  <span className="px-2 py-1 bg-muted rounded-md text-xs">Next.js</span>
-                  <span className="px-2 py-1 bg-muted rounded-md text-xs">TypeScript</span>
-                  <span className="px-2 py-1 bg-muted rounded-md text-xs">Tailwind</span>
-                </div>
-              </CardContent>
-              <CardFooter className="flex justify-between">
-                <Button variant="outline" size="sm" asChild>
-                  <Link href="#" target="_blank">
-                    <Github className="mr-2 h-4 w-4" />
-                    Code
-                  </Link>
-                </Button>
-                <Button size="sm" asChild>
-                  <Link href="#" target="_blank">
-                    Live Demo
-                  </Link>
-                </Button>
-              </CardFooter>
-            </Card>
-
-            {/* Project 3 */}
-            <Card className="overflow-hidden">
-              <div className="h-48 overflow-hidden">
-                <Image
-                  src="/placeholder.svg?height=300&width=500"
-                  alt="Project 3"
-                  width={500}
-                  height={300}
-                  className="w-full h-full object-cover transition-transform hover:scale-105"
-                />
-              </div>
-              <CardHeader>
-                <CardTitle>Weather Forecast App</CardTitle>
-                <CardDescription>
-                  A mobile-responsive weather application with 7-day forecasts and location detection.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  <span className="px-2 py-1 bg-muted rounded-md text-xs">React</span>
-                  <span className="px-2 py-1 bg-muted rounded-md text-xs">Weather API</span>
+                  <span className="px-2 py-1 bg-muted rounded-md text-xs">HTML</span>
                   <span className="px-2 py-1 bg-muted rounded-md text-xs">CSS</span>
+                  <span className="px-2 py-1 bg-muted rounded-md text-xs">JavaScript</span>
                 </div>
               </CardContent>
               <CardFooter className="flex justify-between">
                 <Button variant="outline" size="sm" asChild>
-                  <Link href="#" target="_blank">
+                  <Link href="https://github.com/IM23a-tutkuno/SwissPharmaWebsite" target="_blank">
                     <Github className="mr-2 h-4 w-4" />
                     Code
                   </Link>
                 </Button>
                 <Button size="sm" asChild>
-                  <Link href="#" target="_blank">
+                  <Link href="https://github.com/IM23a-tutkuno/SwissPharmaWebsite" target="_blank">
                     Live Demo
                   </Link>
                 </Button>
@@ -344,7 +267,7 @@ export default function Portfolio() {
             <h2 className="text-3xl font-bold">Get In Touch</h2>
             <div className="w-20 h-1 bg-primary mx-auto"></div>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Have a question or want to work together? Feel free to contact me using the form below or through my
+              Have a question or want to work together? Feel free to contact me through my
               social media.
             </p>
           </div>
@@ -392,4 +315,3 @@ export default function Portfolio() {
     </div>
   )
 }
-
