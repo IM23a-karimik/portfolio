@@ -5,7 +5,7 @@ import React from "react"
 import { useRef } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowDown, Github, Linkedin, Mail, Twitter } from "lucide-react"
+import { ArrowDown, Github, Linkedin, Mail } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
@@ -103,12 +103,13 @@ export default function Portfolio() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <p className="text-lg">
-                piubawpduigawpdugapwdgpawgdpagwdaiuwgdiuagwdigaewdgi
-                uadwguiadwiupgadwpiugadwiupgadwgupiadwgiupadwgupiadwgpiuwad
+              Hi! Ich bin Kian, ein angehender Applikationsentwickler mit grossem Interesse an Webentwicklung, Datenbanken und Cloud-Technologien. Zurzeit bin ich in der Ausbildung und sammle praktische Erfahrung mit Sprachen wie Python, JavaScript und SQL sowie Tools wie MongoDB, AWS und Next.js.
+
               </p>
               <p className="text-lg">
-                jhawdljhagwozgawdpigawidgzaowzgdoazgwdouagzwdozgaw
-                oduzgawoudzgaowuzdgaouwzdgouawzgduzagwd
+              Ich arbeite gerne an Projekten, bei denen Technik auf echte Probleme trifft – ob beim Erstellen von Webanwendungen, dem Aufbau von Datenbanken oder beim Entwickeln smarter Lösungen. Ich lerne schnell, arbeite gerne im Team und bin immer offen für neue Herausforderungen.
+
+              Schau dir gerne meine Projekte an!
               </p>
               <div className="pt-4">
                 <h3 className="text-xl font-semibold mb-4">Education</h3>
@@ -157,7 +158,7 @@ export default function Portfolio() {
 
                 <div>
                   <div className="flex justify-between mb-1">
-                    <span className="font-medium">Machine Learning</span>
+                    <span className="font-medium">Databases</span>
                     <span>75%</span>
                   </div>
                   <div className="w-full bg-muted rounded-full h-2">
@@ -171,7 +172,7 @@ export default function Portfolio() {
                 <div className="flex flex-wrap gap-2">
                   {[
                     "JavaScript",
-                    "TypeScript",
+                    "Java",
                     "React",
                     "Next.js",
                     "Node.js",
@@ -358,21 +359,15 @@ export default function Portfolio() {
                 <h3 className="text-xl font-semibold mb-4">Follow Me</h3>
                 <div className="flex gap-4">
                   <Button variant="outline" size="icon" asChild>
-                    <Link href="https://github.com" target="_blank">
+                    <Link href="https://github.com/IM23a-karimik" target="_blank">
                       <Github className="h-5 w-5" />
                       <span className="sr-only">GitHub</span>
                     </Link>
                   </Button>
                   <Button variant="outline" size="icon" asChild>
-                    <Link href="https://linkedin.com" target="_blank">
+                    <Link href="https://www.linkedin.com/in/kian-karimi-5a8313357/" target="_blank">
                       <Linkedin className="h-5 w-5" />
                       <span className="sr-only">LinkedIn</span>
-                    </Link>
-                  </Button>
-                  <Button variant="outline" size="icon" asChild>
-                    <Link href="https://twitter.com" target="_blank">
-                      <Twitter className="h-5 w-5" />
-                      <span className="sr-only">Twitter</span>
                     </Link>
                   </Button>
                 </div>
