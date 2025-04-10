@@ -259,7 +259,7 @@ export default function Portfolio() {
               <CardHeader>
                 <CardTitle>Payment System</CardTitle>
                 <CardDescription>
-                  A modern payment processing system with secure transaction handling and user account management.
+                  A simple payment function for experimenting.
                 </CardDescription>
               </CardHeader>
               <CardContent>
