@@ -103,11 +103,17 @@ export default function Portfolio() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <p className="text-lg">
-              Hi! Ich bin Kian, ein angehender Applikationsentwickler mit grossem Interesse an Webentwicklung, Datenbanken und Cloud-Technologien. Zurzeit bin ich in der Ausbildung und sammle praktische Erfahrung mit Sprachen wie Python, JavaScript und SQL sowie Tools wie MongoDB, AWS und Next.js.
+              Hi! Ich bin Kian, ein angehender Applikationsentwickler mit grossem 
+              Interesse an Webentwicklung, Datenbanken und Cloud-Technologien. Zurzeit 
+              bin ich in der Ausbildung und sammle praktische Erfahrung mit Sprachen wie 
+              Python, JavaScript und SQL sowie Tools wie MongoDB, AWS und Next.js.
 
               </p>
               <p className="text-lg">
-              Ich arbeite gerne an Projekten, bei denen Technik auf echte Probleme trifft – ob beim Erstellen von Webanwendungen, dem Aufbau von Datenbanken oder beim Entwickeln smarter Lösungen. Ich lerne schnell, arbeite gerne im Team und bin immer offen für neue Herausforderungen.
+              Ich arbeite gerne an Projekten, bei denen Technik auf echte Probleme 
+              trifft, ob beim Erstellen von Webanwendungen, dem Aufbau von Datenbanken 
+              oder beim Entwickeln smarter Lösungen. Ich lerne schnell, arbeite gerne 
+              im Team und bin immer offen für neue Herausforderungen.
 
               Schau dir gerne meine Projekte an!
               </p>
