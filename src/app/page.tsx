@@ -242,11 +242,6 @@ export default function Portfolio() {
                     Code
                   </Link>
                 </Button>
-                <Button size="sm" asChild>
-                  <Link href="https://github.com/IM23a-tutkuno/SwissPharmaWebsite" target="_blank">
-                    Live Demo
-                  </Link>
-                </Button>
               </CardFooter>
             </Card>
             
