@@ -27,7 +27,7 @@ export default function Portfolio() {
         <div className="min-h-screen bg-background">
             {/* Navigation */}
             <header className="fixed top-0 w-full bg-background/80 backdrop-blur-sm z-50 border-b">
-                <div className="container flex h-16 items-center justify-between">
+                <div className="container mx-auto px-6 md:px-8 lg:px-12 flex h-16 items-center justify-between">
                     <div className="font-bold text-xl">Kian K</div>
                     <nav className="hidden md:flex gap-6">
                         <button
@@ -78,8 +78,13 @@ export default function Portfolio() {
                         <div className="flex justify-center">
                             <div
                                 className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary">
-                                <Image src="/placeholder.svg?height=400&width=400" alt="Kian K" fill
-                                       className="object-cover"/>
+                                <Image 
+                                    src="/images/profile.jpg" 
+                                    alt="Kian K" 
+                                    fill
+                                    className="object-cover"
+                                    priority
+                                />
                             </div>
                         </div>
                     </div>
@@ -103,7 +108,7 @@ export default function Portfolio() {
                         <div className="w-20 h-1 bg-primary mx-auto"></div>
                     </div>
 
-                    <div className="grid md:grid-cols-2 gap-12 items-center">
+                    <div className="grid md:grid-cols-2 gap-12 items-start">
                         <div className="space-y-6">
                             <p className="text-lg">
                                 Hi! Ich bin Kian, ein angehender Applikationsentwickler mit grossem
@@ -208,17 +213,16 @@ export default function Portfolio() {
                         <div className="w-20 h-1 bg-primary mx-auto"></div>
                         <p className="text-muted-foreground max-w-2xl mx-auto">
                             Here are some of the projects I&#39;ve worked on. Each project represents my skills and
-                            passion for creating
-                            meaningful applications.
+                            passion for creating meaningful applications.
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
                         {/* Swiss Pharma Website Project */}
-                        <Card className="overflow-hidden max-w-md">
+                        <Card className="overflow-hidden">
                             <div className="h-48 overflow-hidden">
                                 <Image
-                                    src="/placeholder.svg?height=300&width=500"
+                                    src="/images/swiss-pharma.jpg"
                                     alt="Swiss Pharma Website"
                                     width={500}
                                     height={300}
@@ -239,21 +243,26 @@ export default function Portfolio() {
                                     <span className="px-2 py-1 bg-muted rounded-md text-xs">JavaScript</span>
                                 </div>
                             </CardContent>
-                            <CardFooter className="flex justify-between">
+                            <CardFooter className="flex justify-between gap-4">
                                 <Button variant="outline" size="sm" asChild>
                                     <Link href="https://github.com/IM23a-tutkuno/SwissPharmaWebsite" target="_blank">
                                         <Github className="mr-2 h-4 w-4"/>
                                         Code
                                     </Link>
                                 </Button>
+                                <Button variant="outline" size="sm" asChild>
+                                    <Link href="https://IM23a-tutkuno.github.io/SwissPharmaWebsite" target="_blank">
+                                        Preview
+                                    </Link>
+                                </Button>
                             </CardFooter>
                         </Card>
 
                         {/* Payment System Project */}
-                        <Card className="overflow-hidden max-w-md">
+                        <Card className="overflow-hidden">
                             <div className="h-48 overflow-hidden">
                                 <Image
-                                    src="/placeholder.svg?height=300&width=500"
+                                    src="/images/payment-system.jpg"
                                     alt="Payment System"
                                     width={500}
                                     height={300}
@@ -271,11 +280,16 @@ export default function Portfolio() {
                                     <span className="px-2 py-1 bg-muted rounded-md text-xs">JavaScript</span>
                                 </div>
                             </CardContent>
-                            <CardFooter className="flex justify-between">
+                            <CardFooter className="flex justify-between gap-4">
                                 <Button variant="outline" size="sm" asChild>
-                                    <Link href="https://github.com/IM23a-Kk/Payment-system" target="_blank">
+                                    <Link href="https://github.com/IM23a-karimik/Payment-system" target="_blank">
                                         <Github className="mr-2 h-4 w-4"/>
                                         Code
+                                    </Link>
+                                </Button>
+                                <Button variant="outline" size="sm" asChild>
+                                    <Link href="https://IM23a-karimik.github.io/Payment-system" target="_blank">
+                                        Preview
                                     </Link>
                                 </Button>
                             </CardFooter>
@@ -284,7 +298,7 @@ export default function Portfolio() {
 
                     <div className="text-center mt-12">
                         <Button variant="outline" asChild>
-                            <Link href="https://github.com/IM23a-Kk" target="_blank">
+                            <Link href="https://github.com/IM23a-karimik" target="_blank">
                                 <Github className="mr-2 h-4 w-4"/>
                                 View More on GitHub
                             </Link>
@@ -319,7 +333,7 @@ export default function Portfolio() {
                                 <h3 className="text-xl font-semibold mb-4">Follow Me</h3>
                                 <div className="flex gap-4">
                                     <Button variant="outline" size="icon" asChild>
-                                        <Link href="https://github.com/IM23a-Kk" target="_blank">
+                                        <Link href="https://github.com/IM23a-karimik" target="_blank">
                                             <Github className="h-5 w-5"/>
                                             <span className="sr-only">GitHub</span>
                                         </Link>
@@ -339,8 +353,16 @@ export default function Portfolio() {
 
             {/* Footer */}
             <footer className="border-t py-8">
-                <div className="container text-center">
-                    <p className="text-muted-foreground">© {new Date().getFullYear()} Kian. All rights reserved.</p>
+                <div className="container mx-auto px-6 md:px-8 lg:px-12 text-center">
+                    <div className="flex flex-col md:flex-row justify-center items-center gap-4">
+                        <p className="text-muted-foreground">© {new Date().getFullYear()} Kian. All rights reserved.</p>
+                        <Link 
+                            href="/impressum" 
+                            className="text-muted-foreground hover:text-foreground transition-colors"
+                        >
+                            Impressum
+                        </Link>
+                    </div>
                 </div>
             </footer>
         </div>
