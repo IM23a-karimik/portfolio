@@ -164,7 +164,7 @@ export default function Portfolio() {
                             </p>
                             <p className="text-lg">
                                 I enjoy working on projects where technology meets real-world problems,
-                                whether it's creating web applications, building databases, or developing
+                                whether it&apos;s creating web applications, building databases, or developing
                                 smart solutions. I learn quickly, enjoy working in teams, and am always
                                 open to new challenges.
 
