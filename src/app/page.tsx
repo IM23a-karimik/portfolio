@@ -5,7 +5,7 @@ import React from "react"
 import {useRef} from "react"
 import Image from "next/image"
 import Link from "next/link"
-import {ArrowDown, Github, Linkedin, Mail} from "lucide-react"
+import {ArrowDown, Github, Linkedin, Mail, Menu, X} from "lucide-react"
 
 import {Button} from "@/components/ui/button"
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card"
@@ -17,10 +17,12 @@ export default function Portfolio() {
     const aboutRef = useRef<HTMLDivElement>(null)
     const projectsRef = useRef<HTMLDivElement>(null)
     const contactRef = useRef<HTMLDivElement>(null)
+    const [isMenuOpen, setIsMenuOpen] = React.useState(false)
 
     // Scroll to section function
     const scrollToSection = (ref: React.RefObject<HTMLDivElement>) => {
         ref.current?.scrollIntoView({behavior: "smooth"})
+        setIsMenuOpen(false) // Close menu after clicking
     }
 
     return (
@@ -29,6 +31,8 @@ export default function Portfolio() {
             <header className="fixed top-0 w-full bg-background/80 backdrop-blur-sm z-50 border-b">
                 <div className="container mx-auto px-6 md:px-8 lg:px-12 flex h-16 items-center justify-between">
                     <div className="font-bold text-xl">Kian K</div>
+                    
+                    {/* Desktop Navigation */}
                     <nav className="hidden md:flex gap-6">
                         <button
                             onClick={() => scrollToSection(aboutRef)}
@@ -49,10 +53,52 @@ export default function Portfolio() {
                             Contact
                         </button>
                     </nav>
+
+                    {/* Mobile Menu Button */}
+                    <button 
+                        className="md:hidden"
+                        onClick={() => setIsMenuOpen(!isMenuOpen)}
+                    >
+                        {isMenuOpen ? (
+                            <X className="h-6 w-6" />
+                        ) : (
+                            <Menu className="h-6 w-6" />
+                        )}
+                    </button>
+
                     <Button onClick={() => scrollToSection(contactRef)} className="hidden md:flex">
                         Get in Touch
                     </Button>
                 </div>
+
+                {/* Mobile Navigation */}
+                {isMenuOpen && (
+                    <div className="md:hidden border-t">
+                        <nav className="container mx-auto px-6 py-4 flex flex-col gap-4">
+                            <button
+                                onClick={() => scrollToSection(aboutRef)}
+                                className="text-muted-foreground hover:text-foreground transition-colors text-left"
+                            >
+                                About
+                            </button>
+                            <button
+                                onClick={() => scrollToSection(projectsRef)}
+                                className="text-muted-foreground hover:text-foreground transition-colors text-left"
+                            >
+                                Projects
+                            </button>
+                            <button
+                                onClick={() => scrollToSection(contactRef)}
+                                className="text-muted-foreground hover:text-foreground transition-colors text-left"
+                            >
+                                Contact
+                            </button>
+                            <Button onClick={() => scrollToSection(contactRef)} className="w-full">
+                                Get in Touch
+                            </Button>
+                        </nav>
+                    </div>
+                )}
             </header>
 
             <main className="container mx-auto px-4">
@@ -111,19 +157,18 @@ export default function Portfolio() {
                     <div className="grid md:grid-cols-2 gap-12 items-start">
                         <div className="space-y-6">
                             <p className="text-lg">
-                                Hi! Ich bin Kian, ein angehender Applikationsentwickler mit grossem
-                                Interesse an Webentwicklung, Datenbanken und Cloud-Technologien. Zurzeit
-                                bin ich in der Ausbildung und sammle praktische Erfahrung mit Sprachen wie
-                                Python, JavaScript und SQL sowie Tools wie MongoDB, AWS und Next.js.
-
+                                Hi! I'm Kian, an aspiring application developer with a strong
+                                interest in web development, databases, and cloud technologies. Currently,
+                                I'm in training and gaining practical experience with languages like
+                                Python, JavaScript, and SQL, as well as tools like MongoDB, AWS, and Next.js.
                             </p>
                             <p className="text-lg">
-                                Ich arbeite gerne an Projekten, bei denen Technik auf echte Probleme
-                                trifft, ob beim Erstellen von Webanwendungen, dem Aufbau von Datenbanken
-                                oder beim Entwickeln smarter Lösungen. Ich lerne schnell, arbeite gerne
-                                im Team und bin immer offen für neue Herausforderungen.
+                                I enjoy working on projects where technology meets real-world problems,
+                                whether it's creating web applications, building databases, or developing
+                                smart solutions. I learn quickly, enjoy working in teams, and am always
+                                open to new challenges.
 
-                                Schau dir gerne meine Projekte an!
+                                Feel free to check out my projects!
                             </p>
                             <div className="pt-4">
                                 <h3 className="text-xl font-semibold mb-4">Education</h3>
@@ -233,7 +278,7 @@ export default function Portfolio() {
                                 <CardTitle>Swiss Pharma Website</CardTitle>
                                 <CardDescription>
                                     A website for Swiss Pharma that provides information about the
-                                    companies and its products.
+                                    company and its products.
                                 </CardDescription>
                             </CardHeader>
                             <CardContent>
@@ -243,16 +288,11 @@ export default function Portfolio() {
                                     <span className="px-2 py-1 bg-muted rounded-md text-xs">JavaScript</span>
                                 </div>
                             </CardContent>
-                            <CardFooter className="flex justify-between gap-4">
+                            <CardFooter className="flex justify-center gap-4">
                                 <Button variant="outline" size="sm" asChild>
                                     <Link href="https://github.com/IM23a-tutkuno/SwissPharmaWebsite" target="_blank">
                                         <Github className="mr-2 h-4 w-4"/>
                                         Code
-                                    </Link>
-                                </Button>
-                                <Button variant="outline" size="sm" asChild>
-                                    <Link href="https://IM23a-tutkuno.github.io/SwissPharmaWebsite" target="_blank">
-                                        Preview
                                     </Link>
                                 </Button>
                             </CardFooter>
@@ -272,24 +312,21 @@ export default function Portfolio() {
                             <CardHeader>
                                 <CardTitle>Payment System</CardTitle>
                                 <CardDescription>
-                                    A simple payment function for experimenting.
+                                    A simple payment function for experimenting with payment processing.
                                 </CardDescription>
                             </CardHeader>
                             <CardContent>
                                 <div className="flex flex-wrap gap-2 mb-4">
+                                    <span className="px-2 py-1 bg-muted rounded-md text-xs">HTML</span>
+                                    <span className="px-2 py-1 bg-muted rounded-md text-xs">CSS</span>
                                     <span className="px-2 py-1 bg-muted rounded-md text-xs">JavaScript</span>
                                 </div>
                             </CardContent>
-                            <CardFooter className="flex justify-between gap-4">
+                            <CardFooter className="flex justify-center gap-4">
                                 <Button variant="outline" size="sm" asChild>
                                     <Link href="https://github.com/IM23a-karimik/Payment-system" target="_blank">
                                         <Github className="mr-2 h-4 w-4"/>
                                         Code
-                                    </Link>
-                                </Button>
-                                <Button variant="outline" size="sm" asChild>
-                                    <Link href="https://IM23a-karimik.github.io/Payment-system" target="_blank">
-                                        Preview
                                     </Link>
                                 </Button>
                             </CardFooter>
@@ -324,7 +361,7 @@ export default function Portfolio() {
                                 <div className="space-y-4">
                                     <div className="flex items-center gap-4">
                                         <Mail className="h-5 w-5 text-primary"/>
-                                        <span>kian_K@icloud.com</span>
+                                        <span>kian_karimi@icloud.com</span>
                                     </div>
                                 </div>
                             </div>

@@ -9,34 +9,34 @@ export default function Impressum() {
         <div className="min-h-screen bg-background">
             <main className="container mx-auto px-6 md:px-8 lg:px-12 py-20">
                 <div className="max-w-3xl mx-auto">
-                    <h1 className="text-4xl font-bold mb-8">Impressum</h1>
+                    <h1 className="text-4xl font-bold mb-8">Legal Notice</h1>
                     
                     <div className="space-y-6">
                         <section>
-                            <h2 className="text-2xl font-semibold mb-4">Angaben gemäß § 5 TMG</h2>
+                            <h2 className="text-2xl font-semibold mb-4">Information according to § 5 TMG</h2>
                             <p className="text-lg">
-                                Kian K<br/>
-                                Musterstraße 123<br/>
-                                8000 Zürich<br/>
-                                Schweiz
+                                Kian Karimi<br/>
+                                Melchrütistrasse 17<br/>
+                                8304 Wallisellen<br/>
+                                Switzerland
                             </p>
                         </section>
 
                         <section>
-                            <h2 className="text-2xl font-semibold mb-4">Kontakt</h2>
+                            <h2 className="text-2xl font-semibold mb-4">Contact</h2>
                             <p className="text-lg">
-                                Telefon: +41 123 456 789<br/>
-                                E-Mail: kian_K@icloud.com
+                                Phone: +41 79 208 28 28<br/>
+                                Email: kian_karimi@icloud.com
                             </p>
                         </section>
 
                         <section>
-                            <h2 className="text-2xl font-semibold mb-4">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
+                            <h2 className="text-2xl font-semibold mb-4">Responsible for content according to § 55 Abs. 2 RStV</h2>
                             <p className="text-lg">
-                                Kian K<br/>
-                                Musterstraße 123<br/>
-                                8000 Zürich<br/>
-                                Schweiz
+                                Kian Karimi<br/>
+                                Melchrütistrasse 17<br/>
+                                8304 Wallisellen<br/>
+                                Switzerland
                             </p>
                         </section>
                     </div>
@@ -44,7 +44,7 @@ export default function Impressum() {
                     <div className="mt-12">
                         <Button variant="outline" asChild>
                             <Link href="/">
-                                Zurück zur Startseite
+                                Back to Homepage
                             </Link>
                         </Button>
                     </div>
