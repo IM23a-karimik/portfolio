@@ -107,7 +107,7 @@ export default function Portfolio() {
                     <div className="grid gap-8 md:grid-cols-2 items-center">
                         <div className="space-y-6">
                             <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
-                                Hi, I&#39;m <span className="text-primary">Kian K</span>
+                                Hi, I&apos;m <span className="text-primary">Kian K</span>
                             </h1>
                             <p className="text-xl text-muted-foreground">
                                 Computer Science student passionate about building innovative web applications and
@@ -157,9 +157,9 @@ export default function Portfolio() {
                     <div className="grid md:grid-cols-2 gap-12 items-start">
                         <div className="space-y-6">
                             <p className="text-lg">
-                                Hi! I'm Kian, an aspiring application developer with a strong
+                                Hi! I&apos;m Kian, an aspiring application developer with a strong
                                 interest in web development, databases, and cloud technologies. Currently,
-                                I'm in training and gaining practical experience with languages like
+                                I&apos;m in training and gaining practical experience with languages like
                                 Python, JavaScript, and SQL, as well as tools like MongoDB, AWS, and Next.js.
                             </p>
                             <p className="text-lg">
@@ -257,7 +257,7 @@ export default function Portfolio() {
                         <h2 className="text-3xl font-bold">My Projects</h2>
                         <div className="w-20 h-1 bg-primary mx-auto"></div>
                         <p className="text-muted-foreground max-w-2xl mx-auto">
-                            Here are some of the projects I&#39;ve worked on. Each project represents my skills and
+                            Here are some of the projects I&apos;ve worked on. Each project represents my skills and
                             passion for creating meaningful applications.
                         </p>
                     </div>
